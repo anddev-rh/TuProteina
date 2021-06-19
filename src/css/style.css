@@ -101,7 +101,102 @@ header img{
 iframe {
   align-self: center;
   margin-top: 20px;
-  height: 480px;
-  min-height: 250px;
-  width: 80vw;
+  height: 215px;
+  width: 260px;
+}
+
+.calculator-container {
+  display: grid;
+  padding: 14px 14px;
+  background-color: var(--dark-blue);
+  color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+}
+
+.calculator-field {
+  display: grid;
+  justify-content: center;
+  row-gap: 15px;
+  
+}
+
+.calculator-container h2 {
+  margin: 10px 0;
+  font-size: 2.6rem;
+}
+
+.calculator-container h3 {
+  font-size:1.8rem ;
+}
+
+.calculator-container p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+}
+
+.btn {
+  justify-self: center;
+  width: 170px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: var(--salmon);
+  outline: none;
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.input {
+  height: 28px;
+  width: 50px;
+  border-radius: 3px;
+  padding: 0 10px;
+  outline: none;
+  border: none;
+  justify-self: flex-end;
+  background-color: var(--beige);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.radio-input {
+  justify-self: center;
+  font-size: 2rem;
+}
+
+.calculator-field--2, .calculator-field--4{
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.calculator-field--2 h3, .calculator-field--4 h3 {
+  grid-column: 1 / 3;
+}
+
+.subtitle, .note {
+  grid-column: 1 / 3;
+}
+
+.note {
+  border-radius: 15px;
+  padding: 10px;
+  font-weight: 200;
+  background-color:rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.note span {
+  font-weight: 700;
+}
+
+.calculator-field--2 button, .calculator-field--4 button  {
+  grid-column: 1 / 3;
+}
+
+.hide {
+  display: none;
 }

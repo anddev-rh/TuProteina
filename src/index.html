@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de Proteina</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tablet.css" media="(min-width: 768px)">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -36,9 +37,58 @@
   
   </div>
 
+  <div class="calculator-container">
+    <h2>Calculemos...</h2>
+
+    <div class="calculator-field calculator-field--0">
+      <p>Te haremos algunas preguntas, contestalas todas hasta el final para poder calcular cuanta proteina necesitas.</p>
+      <button class="btn">¡Iniciar!</button>
+    </div>
+
+    <div class="calculator-field calculator-field--1 hide">
+      <h3>¿Eres una mujer que actualmente está embarazada o lactando?</h3>
+      <p class="radio-input">
+        <input type="radio" name="radio" value="0">
+        Si
+        <input type="radio" name="radio" value="1">
+        No
+      </p>
+      <button class="btn">Siguiente</button>
+    </div>
+
+    <div class="calculator-field calculator-field--2 hide">
+      <h3>¿Cual es tu edad?</h3>
+      <p class="subtitle">O la edad de la persona que quieres calcular...</p>
+      <input class="input" type="number">
+      <p>Años</p>
+      
+      <button class="btn">Siguiente</button>
+    </div>
+
+    <div class="calculator-field calculator-field--3 hide">
+      <h3>¿Haces ejercicio?</h3>
+      <p class="radio-input">
+        <input type="radio" name="radio" value="0">
+        Si
+        <input type="radio" name="radio" value="1">
+        No
+      </p>
+      <button class="btn">Siguiente</button>
+    </div>
+
+    <div class="calculator-field calculator-field--4 hide">
+      <h3>¿Cual es tu peso?</h3>
+      <p class="note"> <span>Nota:</span>  Para que este calculo funcione debes escribir tu peso ideal, si te encuentras en sobrepeso, obesidad o muy bajo de peso, no escribas acá lo que pesas en este momento, sino el peso que idealmente deberias tener. </p>
+      <input class="input"type="number">
+      <p>Kilogramos</p>
+      
+      <button class="btn">Siguiente</button>
+    </div>
+  </div>
+
   
 
   
-  
+  <script src="script.js"></script>
 </body>
 </html>
