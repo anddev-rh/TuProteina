@@ -47,19 +47,19 @@
 
     <div class="calculator-field calculator-field--1 hide">
       <h3>¿Eres una mujer que actualmente está embarazada o lactando?</h3>
-      <p class="radio-input">
-        <input type="radio" name="radio" value="0">
+      <form class="radio-input">
+        <input type="radio" name="radio" value="0" id="radio1" >
         Si
-        <input type="radio" name="radio" value="1">
+        <input type="radio" name="radio" value="1" id="radio2" checked>
         No
-      </p>
+      </form>
       <button class="btn btn-1">Siguiente</button>
     </div>
 
     <div class="calculator-field calculator-field--2 hide">
       <h3>¿Cual es tu edad?</h3>
       <p class="subtitle">O la edad de la persona que quieres calcular...</p>
-      <input class="input" type="number">
+      <input class="input" type="number" id="age">
       <p>Años</p>
       
       <button class="btn btn-2">Siguiente</button>
@@ -67,23 +67,34 @@
 
     <div class="calculator-field calculator-field--3 hide">
       <h3>¿Haces ejercicio?</h3>
-      <p class="radio-input">
-        <input type="radio" name="radio" value="0">
+      <form class="radio-input">
+        <input type="radio" name="radio" value="0" id="radio3">
         Si
-        <input type="radio" name="radio" value="1">
+        <input type="radio" name="radio" value="1" id="radio4">
         No
-      </p>
+      </form>
       <button class="btn btn-3">Siguiente</button>
     </div>
 
     <div class="calculator-field calculator-field--4 hide">
       <h3>¿Cual es tu peso?</h3>
       <p class="note"> <span>Nota:</span>  Para que este calculo funcione debes escribir tu peso ideal, si te encuentras en sobrepeso, obesidad o muy bajo de peso, no escribas acá lo que pesas en este momento, sino el peso que idealmente deberias tener. </p>
-      <input class="input"type="number">
+      <input class="input"type="number" id="weight">
       <p>Kilogramos</p>
       
       <button class="btn btn-4">Siguiente</button>
     </div>
+  </div>
+
+  <div class="calculator-result hide">
+    <h2>Tu resultado</h2>
+    <p class="result-text"></p>
+    <button>Calcular otra vez</button>
+  </div>
+
+  <div class="advices-container hide">
+    <h2>¿Cómo puedo consumir esos gramos?</h2>
+
   </div>
 
   
