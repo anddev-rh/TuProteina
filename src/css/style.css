@@ -147,6 +147,12 @@ iframe {
   font-size: 1.6rem;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
 .input {
   height: 28px;
   width: 50px;
