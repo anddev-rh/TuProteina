@@ -12,32 +12,46 @@
 </head>
 <body>
   <header>
-    <p>LOREM</p>
-    <img src="img/menu.svg" alt="">
+    <p>Tu Proteína</p>
+    
+    <!-- <img src="img/menu.svg" alt=""> -->
   </header>
   
   <div class="info-container">
     <h1 class="info--title">¿Cuanta proteína necesito comer al día?</h1>
     <img src="img/protein.svg" alt="">
     <p class="info--text">¿Sabias que según la OMS (organización mundial de la salud) la mayoría de la población consume mucho menos de la proteina que su cuerpo necesita?</p>
-    <!-- <p class="info--text">De los tres macronutrientes (Carbohidratos, Grasas y Proteinas) la proteina es el que más necesitas y el cual es imprescindible en tu alimentación, 
-      de hecho los expertos sugieren construir tu plato a partir de lo que vas a comer de proteina.</p> -->
+    <button class="btn"><a href="#calculator">Calcular ahora!</a> </button>
   </div>
   <div class="main-container">
     <h2>¿Por qué es importante calcular la proteína que consumo?</h2>
-    <h3>Es el macronutriente más importante  <span>&triangleright;</span></h3>
-    <p>Expertos aseguran que puedes construir tu plato basado en la cantidad de proteina que debes consumir, incluso si un día no comieras grasas y carbohidratos tu cuerpo no los extrañaría tanto como la proteina.</p>
-    <h3>Todo extremo es malo <span>&triangleright;</span></h3>
-    <p>Tanto el exceso como la falta de proteina se podrían convertir en un grave problema para tu salud</p>
-    <h3>No todos necesitamos lo mismo <span>&triangleright;</span></h3>
-    <p>Dependiendo variables como tu peso, edad y algunas otras condiciones tus requerimientos protéicos serán diferentes, eso es precisamente lo que te ayudaremos a calcular. <br>
-      Pero antes, me gustaría que vieras más información acerca de la importancia de consumir la proteína adecuada, en este video realizado por un experto en el tema...
-    </p>
+
+
+    <details open>
+      <summary>
+        Es el macronutriente más importante
+      </summary>
+      <p>Expertos aseguran que puedes construir tu plato basado en la cantidad de proteina que debes consumir, incluso si un día no comieras grasas y carbohidratos tu cuerpo no los extrañaría tanto como la proteina.</p>
+    </details>
+
+    <details>
+      <summary>
+        Todo extremo es malo
+      </summary>
+      <p>Tanto el exceso como la falta de proteina se podrían convertir en un grave problema para tu salud.</p>
+    </details>
+    
+    <details>
+      <summary>No todos necesitamos lo mismo</summary>
+      <p>Dependiendo variables como tu peso, edad y algunas otras condiciones tus requerimientos protéicos serán diferentes, eso es precisamente lo que te ayudaremos a calcular.</p>
+      <p>Pero antes, me gustaría que vieras más información acerca de la importancia de consumir la proteína adecuada, en este video realizado por un experto en el tema...</p>
+    </details>
+    
     <iframe  src="https://www.youtube.com/embed/Sy93I-gPCrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   
   </div>
 
-  <div class="calculator-container">
+  <div  id="calculator" class="calculator-container">
     <h2>Calculemos...</h2>
 
     <div class="calculator-field calculator-field--0">
@@ -89,12 +103,52 @@
   <div class="calculator-result hide">
     <h2>Tu resultado</h2>
     <p class="result-text"></p>
-    <button>Calcular otra vez</button>
+    <button class="btn-restart btn">Calcular otra vez</button>
   </div>
 
-  <div class="advices-container hide">
+  <div class="advices-container ">
     <h2>¿Cómo puedo consumir esos gramos?</h2>
+    <p class="advices-subtitle">A continuación te damos algunas ideas de alimentos y la cantidad de proteina que contienen, para que asi cuentes y calcules según tus requerimientos de proteina al día.</p>
+  
 
+    <div class="card">
+      <img src="img/protein.svg" alt="">
+      <p class="card--title">Carnes</p>
+      <p class="card--description">En promedio la cuarta parte de su peso cocido, es proteina.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/beans.svg" alt="">
+      <p class="card--title">Granos</p>
+      <p class="card--description">Una taza de granos como el frijol o la lenteja contiene aproximadamente unos 8 gramos de proteina.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/egg.svg" alt="">
+      <p class="card--title">Huevos</p>
+      <p class="card--description">Los huevos son un alimento increible, a parte de contener grasas buenas para el cuerpo, cada huevo aporta alrededor de 6.5 gramos de proteina.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/almond.svg" alt="">
+      <p class="card--title">Almendras</p>
+      <p class="card--description">Las almendras y otras nueces se componen en su mayoría de grasas saludables, pero un puñado de ellas contiene 3 gramos de proteina.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/champinon.svg" alt="">
+      <p class="card--title">Champiñones</p>
+      <p class="card--description">Una taza de champiñones contiene 5 gramos de proteina.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/brocoli.svg" alt="">
+      <p class="card--title">Brócoli</p>
+      <p class="card--description">Una taza de brócoli contiene 3 gramos de proteina.</p>
+    </div>
+
+
+  
   </div>
 
   

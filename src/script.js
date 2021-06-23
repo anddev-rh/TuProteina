@@ -3,6 +3,7 @@ const btn1 = document.querySelector('.btn-1')
 const btn2 = document.querySelector('.btn-2')
 const btn3 = document.querySelector('.btn-3')
 const btn4 = document.querySelector('.btn-4')
+const btnRestart = document.querySelector('.btn-restart')
 
 const field0 = document.querySelector('.calculator-field--0')
 const field1 = document.querySelector('.calculator-field--1')
@@ -31,7 +32,9 @@ let user = {
 
 const getAnswer = () => {
   field0.classList.add('hide')
+  field4.classList.add('hide')
   field1.classList.remove('hide')
+
   
   btn1.addEventListener('click', function(){
     if(radio1.checked){
@@ -122,6 +125,7 @@ const haveExercise = () => {
 
 
 btnStart.addEventListener('click', getAnswer)
+btnRestart.addEventListener('click', getAnswer)
 //btn1.addEventListener('click', function() {hideShow(field1, field2)})
 //btn2.addEventListener('click', function() {hideShow(field2, field3)})
 //btn3.addEventListener('click', function() {hideShow(field3, field4)})
