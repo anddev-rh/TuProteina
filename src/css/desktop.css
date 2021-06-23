@@ -28,3 +28,7 @@ iframe {
 .advices-container h2, .advices-subtitle {
   grid-column: 1 / 4;
 }
+
+.developed-by{
+  grid-column: 2 / 3;
+}

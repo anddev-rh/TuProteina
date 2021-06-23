@@ -47,3 +47,7 @@ iframe {
 .advices-subtitle {
   padding: 0 80px;
 }
+
+.developed-by{
+  grid-column: 1 / 3;
+}
