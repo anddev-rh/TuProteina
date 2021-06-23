@@ -85,8 +85,7 @@ a {
 }
 
 .main-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   padding: 14px;
   font-family: 'Source Sans Pro', sans-serif;
   color: var(--black);
@@ -115,7 +114,7 @@ a {
 }
 
 iframe {
-  align-self: center;
+  justify-self: center;
   margin-top: 20px;
   height: 215px;
   width: 260px;

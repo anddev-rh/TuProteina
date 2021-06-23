@@ -1,0 +1,30 @@
+.info-container h1{
+  font-size: 5rem;
+}
+
+.main-container {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+
+.main-container h2 {
+  font-size: 4rem;
+} 
+
+.main-container details {
+  grid-column: 1  / 2;
+}
+
+iframe {
+  grid-row: 1 / 4;
+  grid-column: 2 / 3;
+}
+
+.advices-container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.advices-container h2, .advices-subtitle {
+  grid-column: 1 / 4;
+}
