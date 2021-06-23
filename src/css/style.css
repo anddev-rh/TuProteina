@@ -122,10 +122,16 @@ iframe {
 
 .calculator-container {
   display: grid;
+  row-gap: 14px;
   padding: 14px 14px;
   background-color: var(--dark-blue);
   color: whitesmoke;
   font-family: 'Poppins', sans-serif;
+}
+
+.calculator-container img {
+  width: 100px;
+  justify-self: center;
 }
 
 .calculator-field {
@@ -224,6 +230,10 @@ margin: 0;
   row-gap: 15px;
   justify-content: center;
   padding: 14px;
+}
+
+.calculator-result {
+  border-top: var(--dark-blue) solid 1px;
 }
 
 .calculator-result h2 {

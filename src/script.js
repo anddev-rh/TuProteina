@@ -5,12 +5,13 @@ const btn3 = document.querySelector('.btn-3')
 const btn4 = document.querySelector('.btn-4')
 const btnRestart = document.querySelector('.btn-restart')
 
+const calculator = document.getElementById('calculator')
 const field0 = document.querySelector('.calculator-field--0')
 const field1 = document.querySelector('.calculator-field--1')
 const field2 = document.querySelector('.calculator-field--2')
 const field3 = document.querySelector('.calculator-field--3')
 const field4 = document.querySelector('.calculator-field--4')
-
+let calculatorResult = document.querySelector('.calculator-result')
 
 const radio1 = document.getElementById('radio1')
 const radio2 = document.getElementById('radio2')
@@ -31,9 +32,13 @@ let user = {
 //console.log(radioInput.value);
 
 const getAnswer = () => {
+
   field0.classList.add('hide')
   field4.classList.add('hide')
+  calculatorResult.classList.add('hide')
   field1.classList.remove('hide')
+  calculator.classList.remove('hide')
+
 
   
   btn1.addEventListener('click', function(){
@@ -65,22 +70,18 @@ const getWeight = () => {
         grams = 1.5
         let result = grams * parseFloat(weight.value)
         resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
-        //console.log(`Debes consumir ${result} gramos de proteina al día`);
       } else if (user.age <= 5) {
         grams = 2
         let result = grams * parseFloat(weight.value)
-        resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
-        //console.log(`Debes consumir ${result} gramos de proteina al día`);
+        resultText.textContent = `Los menores de 5 años deben consumir 2 gramos de proteína al día, en tu caso ${result} gramos.`
       } else if (user.age > 5 && user.age<= 18) {
         grams = 1.5
         let result = grams * parseFloat(weight.value)
-        resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
-        //console.log(`Debes consumir ${result} gramos de proteina al día`);
+        resultText.textContent = `Los niños y jovenes entre 5 y 18 deben consumir 1.5 gramos por kilo de peso al día, en tu caso ${result} gramos`
       } else if (user.age >= 50){
         grams = 1.5
         let result = grams * parseFloat(weight.value)
-        resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
-        //console.log(`Debes consumir ${result} gramos de proteina al día.`);
+        resultText.textContent = `Ya pasaste tus 50, debes consumir ${result} gramos de proteina al día independientemente que hagas ejercicio o no, sin embargo para que ganes masa muscular puedes hacer ejercicio y consumir unos gramos mas de proteina, esto beneficiara mucho tu salud en esta etapa de tu vida.`
       } else if (user.age > 18 && user.age < 50){
         if(user.exercise == true) {
           grams = 1.4
@@ -88,21 +89,20 @@ const getWeight = () => {
           let result = grams * parseFloat(weight.value)
           let result2 = grams2 * parseFloat(weight.value)
           resultText.textContent = `Debes consumir entre ${result} y ${result2} gramos de proteina al día.`
-          //console.log(`Debes consumir entre ${result} y ${result2} gramos de proteina al día.`);
         } else {
           grams = 1
           let result = grams * parseFloat(weight.value)
           resultText.textContent = `Debes consumir ${result} gramos de proteina al día ya que no haces ejercicio, sin embargo deberias empezar a hacerlo si quieres cuidar mejor tu salud.`
-          //console.log(`Debes consumir ${result} gramos de proteina al día ya que no haces ejercicio, sin embargo deberias empezar a hacerlo si quieres cuidar mejor tu salud.`);
         }
       }
     }
 
-    let calculatorResult = document.querySelector('.calculator-result')
+    
     let advices = document.querySelector('.advices-container')
 
     calculatorResult.classList.remove('hide')
     advices.classList.remove('hide')
+    calculator.classList.toggle('hide')
   })
 }
 
