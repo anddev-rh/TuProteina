@@ -55,39 +55,46 @@ const getWeight = () => {
   let resultText = document.querySelector('.result-text')
 
   btn4.addEventListener('click', function() {
-    if(user.pregnantWoman === true) {
-      grams = 1.5
-      let result = grams * parseFloat(weight.value)
-      resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
-      //console.log(`Debes consumir ${result} gramos de proteina al día`);
-    } else if (user.age <= 5) {
-      grams = 2
-      let result = grams * parseFloat(weight.value)
-      resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
-      //console.log(`Debes consumir ${result} gramos de proteina al día`);
-    } else if (user.age > 5 && user.age<= 18) {
-      grams = 1.5
-      let result = grams * parseFloat(weight.value)
-      resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
-      //console.log(`Debes consumir ${result} gramos de proteina al día`);
-    } else if (user.age >= 50){
-      grams = 1.5
-      let result = grams * parseFloat(weight.value)
-      resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
-      //console.log(`Debes consumir ${result} gramos de proteina al día.`);
-    } else if (user.age > 18 && user.age < 50){
-      if(user.exercise == true) {
-        grams = 1.4
-        grams2 = 1.7
+
+  if (weight.value === ""){
+  
+    swal("Ups...", "Para continuar ingresa un valor", "error");
+  } else {
+
+      if(user.pregnantWoman === true) {
+        grams = 1.5
         let result = grams * parseFloat(weight.value)
-        let result2 = grams2 * parseFloat(weight.value)
-        resultText.textContent = `Debes consumir entre ${result} y ${result2} gramos de proteina al día.`
-        //console.log(`Debes consumir entre ${result} y ${result2} gramos de proteina al día.`);
-      } else {
-        grams = 1
+        resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
+        //console.log(`Debes consumir ${result} gramos de proteina al día`);
+      } else if (user.age <= 5) {
+        grams = 2
         let result = grams * parseFloat(weight.value)
-        resultText.textContent = `Debes consumir ${result} gramos de proteina al día ya que no haces ejercicio, sin embargo deberias empezar a hacerlo si quieres cuidar mejor tu salud.`
-        //console.log(`Debes consumir ${result} gramos de proteina al día ya que no haces ejercicio, sin embargo deberias empezar a hacerlo si quieres cuidar mejor tu salud.`);
+        resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
+        //console.log(`Debes consumir ${result} gramos de proteina al día`);
+      } else if (user.age > 5 && user.age<= 18) {
+        grams = 1.5
+        let result = grams * parseFloat(weight.value)
+        resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
+        //console.log(`Debes consumir ${result} gramos de proteina al día`);
+      } else if (user.age >= 50){
+        grams = 1.5
+        let result = grams * parseFloat(weight.value)
+        resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
+        //console.log(`Debes consumir ${result} gramos de proteina al día.`);
+      } else if (user.age > 18 && user.age < 50){
+        if(user.exercise == true) {
+          grams = 1.4
+          grams2 = 1.7
+          let result = grams * parseFloat(weight.value)
+          let result2 = grams2 * parseFloat(weight.value)
+          resultText.textContent = `Debes consumir entre ${result} y ${result2} gramos de proteina al día.`
+          //console.log(`Debes consumir entre ${result} y ${result2} gramos de proteina al día.`);
+        } else {
+          grams = 1
+          let result = grams * parseFloat(weight.value)
+          resultText.textContent = `Debes consumir ${result} gramos de proteina al día ya que no haces ejercicio, sin embargo deberias empezar a hacerlo si quieres cuidar mejor tu salud.`
+          //console.log(`Debes consumir ${result} gramos de proteina al día ya que no haces ejercicio, sin embargo deberias empezar a hacerlo si quieres cuidar mejor tu salud.`);
+        }
       }
     }
 
@@ -103,8 +110,12 @@ const getAge = () => {
   field1.classList.add('hide')
   field2.classList.remove('hide')
   btn2.addEventListener('click', function(){
-    user.age = parseInt(age.value)
-    haveExercise()    
+    if (age.value === "") {
+      swal("Ups...", "Para continuar ingresa un valor", "error")
+    } else {
+      user.age = parseInt(age.value)
+      haveExercise()  
+    }
   })
 }
 
@@ -126,10 +137,7 @@ const haveExercise = () => {
 
 btnStart.addEventListener('click', getAnswer)
 btnRestart.addEventListener('click', getAnswer)
-//btn1.addEventListener('click', function() {hideShow(field1, field2)})
-//btn2.addEventListener('click', function() {hideShow(field2, field3)})
-//btn3.addEventListener('click', function() {hideShow(field3, field4)})
-//btn4.addEventListener('click', function() {hideShow(field1, field2)})
+
 
 
 
