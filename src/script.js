@@ -69,7 +69,7 @@ const getWeight = () => {
       if(user.pregnantWoman === true) {
         grams = 1.5
         let result = grams * parseFloat(weight.value)
-        resultText.textContent = `Debes consumir ${result} gramos de proteina al día`
+        resultText.textContent = `Ya que eres una mujer embarazada o lactando actualmente, debes consumir ${result} gramos de proteína al día.`
       } else if (user.age <= 5) {
         grams = 2
         let result = grams * parseFloat(weight.value)
@@ -81,18 +81,18 @@ const getWeight = () => {
       } else if (user.age >= 50){
         grams = 1.5
         let result = grams * parseFloat(weight.value)
-        resultText.textContent = `Ya pasaste tus 50, debes consumir ${result} gramos de proteina al día independientemente que hagas ejercicio o no, sin embargo para que ganes masa muscular puedes hacer ejercicio y consumir unos gramos mas de proteina, esto beneficiara mucho tu salud en esta etapa de tu vida.`
+        resultText.textContent = `Ya pasaste tus 50, debes consumir ${result} gramos de proteína al día independientemente que hagas ejercicio o no, sin embargo para que ganes masa muscular puedes hacer ejercicio y consumir unos gramos mas de proteína, esto beneficiara mucho tu salud en esta etapa de tu vida.`
       } else if (user.age > 18 && user.age < 50){
         if(user.exercise == true) {
           grams = 1.4
           grams2 = 1.7
           let result = grams * parseFloat(weight.value)
           let result2 = grams2 * parseFloat(weight.value)
-          resultText.textContent = `Debes consumir entre ${result} y ${result2} gramos de proteina al día.`
+          resultText.textContent = `Debes consumir entre ${result} y ${result2} gramos de proteína al día.`
         } else {
           grams = 1
           let result = grams * parseFloat(weight.value)
-          resultText.textContent = `Debes consumir ${result} gramos de proteina al día ya que no haces ejercicio, sin embargo deberias empezar a hacerlo si quieres cuidar mejor tu salud.`
+          resultText.textContent = `Debes consumir ${result} gramos de proteína al día ya que no haces ejercicio, sin embargo deberias empezar a hacerlo si quieres cuidar mejor tu salud.`
         }
       }
     }
