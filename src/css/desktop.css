@@ -25,13 +25,6 @@ iframe {
   justify-self: center;
 }
 
-.calculator-container h2 {
-  justify-self: center;
-}
-
-.calculator-container h3 {
-  justify-self: center;
-}
 
 .advices-container {
   grid-template-columns: repeat(3, 1fr);
